@@ -12,6 +12,7 @@ html {
 
 body {
   font-family: "Josefin Sans", sans-serif;
+  font-size: 400;
   background-color: #161722;
   height: 100%;
   position: relative;
@@ -21,7 +22,7 @@ body {
 .header {
   background-image: url(../public/images/bg-desktop-dark.jpg);
   background-size: cover;
-  height: 40vh;
+  min-height: 40vh;
 }
 
 .main {
@@ -31,12 +32,12 @@ body {
 }
 .main__section {
   width: 54rem;
-  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
 
   display: flex;
   flex-direction: column;
   gap: 2rem;
   color: #e4e5f1;
+  padding-bottom: 4rem;
 }
 .heading__box {
   display: flex;
@@ -61,6 +62,8 @@ body {
   background-color: #25273d;
   padding: 2rem 1rem;
   gap: 1.5rem;
+  box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
 }
 
 .todo__input {
@@ -72,10 +75,13 @@ body {
   padding: 1rem;
   font-size: 1.8rem;
   width: 100%;
+  letter-spacing: -0.025rem;
 }
 
 .todo__list-box {
   background-color: #25273d;
+  box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
 }
 .todo__text-box {
   display: flex;
@@ -112,6 +118,7 @@ body {
 .todo__text {
   font-size: 1.8rem;
   color: #c8cbe7;
+  letter-spacing: -0.025rem;
 }
 
 .checked__text {
@@ -129,10 +136,11 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  color: #777a92;
+  color: #5b5e7e;
 }
 .left__states {
   font-size: 1.4rem;
+  letter-spacing: -0.0194rem;
 }
 
 .todo__states {
@@ -148,6 +156,8 @@ body {
 .clear__completed {
   transition: all 0.3s;
   font-size: 1.4rem;
+  letter-spacing: -0.0194rem;
+  font-weight: 700;
 }
 
 .Active__states:hover,
@@ -192,15 +202,24 @@ body,
 @media only screen and (max-width: 31.25em) {
   .main__section {
     width: 100vw;
+    padding: 0 2rem;
   }
 
-  .all__states,
-  .active__states,
-  .completed__states,
-  .clear__completed {
-    font-size: 0.8rem;
+  .summary__box {
+    position: relative;
+  }
+
+  .todo__states {
+    position: absolute;
+    bottom: -8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #25273d;
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    width: 100%;
+    justify-content: center;
+    padding: 2rem;
+    gap: 4rem;
   }
 }
-
-/* .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); } */
